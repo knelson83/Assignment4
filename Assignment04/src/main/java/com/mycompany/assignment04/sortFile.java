@@ -22,7 +22,7 @@ public class sortFile {
 		}
 		bufferedReader.close();
 
-		Collections.sort(lines, Collator.getInstance());
+		
 
 		FileWriter writer = new FileWriter("C:\\sorted_names.txt");
 		for (String str : lines) {

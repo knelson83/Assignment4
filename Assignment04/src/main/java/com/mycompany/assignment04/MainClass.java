@@ -4,7 +4,9 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
 import java.io.FileNotFoundException;
+import java.text.Collator;
 import java.util.Arrays;
+import java.util.Collections;
 
 
 
@@ -18,15 +20,14 @@ public class MainClass{
 		
 		while (inputFile.hasNext()){
 			nameList.add(inputFile.next());
-			System.out.println(nameList);
-			System.out.println("=======================");
-			long[] sort = null;
-			System.out.println(Arrays.toString(sort));
+			
 		}
 			
 		inputFile.close();
+		Collections.sort(nameList, Collator.getInstance());
+		System.out.println(nameList);
+		System.out.println("=======================");
 		
-	
 	}
 
 }
